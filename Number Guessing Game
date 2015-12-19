@@ -1,4 +1,19 @@
 # This is a guess the number game.
+
+def playAgain():
+    print('That was fun! Do you want to play again?')
+    response=input()
+    response=(response.lower())
+    while response!='no' and response!='n' and response!='yes' and response!='y':
+        print ('Que? Do you want to play again?')
+        response=input()
+        response=(response.lower())
+        if response=='Yes' or response=='yes' or response=='y':
+            continue
+        elif response=='No' or response=='no' or response=='n':
+            print('Until next time!')
+            sys.exit()     
+
 import sys
 import random
 while True:
@@ -21,30 +36,10 @@ while True:
     
     if guess==secretNumber:
        print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
-       print('That was fun! Do you want to play again?')
-       response=input()
-       response=(response.lower())
-       while response!='no' and response!='n' and response!='yes' and response!='y':
-           print ('Que? Do you want to play again?')
-           response=input()
-           response=(response.lower())
-       if response=='Yes' or response=='yes' or response=='y':
-           continue
-       elif response=='No' or response=='no' or response=='n':
-            print('Until next time!')
-            sys.exit()           
+       playAgain()
+       
     else:
        print('Nope. The number I was thinking of was ' + str(secretNumber))
-       print('That was fun! Do you want to play again?')
-       response=input()
-       response=(response.lower())
-       while response!='no' and response!='n' and response!='yes' and response!='y':
-           print ('Que? Do you want to play again?')
-           response=input()
-           response=(response.lower())
-       if response=='Yes' or response=='yes' or response=='y':
-           continue
-       elif response=='No' or response=='no' or response=='n':
-            print('Until next time!')
-            sys.exit()      
+       playAgain()   
     
+
