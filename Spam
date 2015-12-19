@@ -14,9 +14,11 @@ while True:
 
     print ('Do you want to continue?')      
     response=input()
-    while response!='No' and response!='no' and response!='n' and response!='Yes' and response!='yes' and response!='y':
+    response=(response.lower())
+    while response!='no' and response!='n' and response!='yes' and response!='y':
         print ('Que? Do you want to continue or not?')
         response=input()
+        response=(response.lower())
     if response=='No' or response=='no' or response=='n':
         print('Goodbye, friend.')
         sys.exit()    
