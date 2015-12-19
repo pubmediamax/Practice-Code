@@ -1,0 +1,26 @@
+import sys
+while True:
+    print('How many spam?')
+    try:
+        spam=input()
+        spam=int(spam)
+        if spam<=10:
+               print('Not enough spam!')
+        else:
+               print ('Now that\'s a lotta spam!')
+    except:
+            print ('Try numbers, okay?')
+            continue
+
+    print ('Do you want to continue?')      
+    response=input()
+    while response!='No' and response!='no' and response!='n' and response!='Yes' and response!='yes' and response!='y':
+        print ('Que? Do you want to continue or not?')
+        response=input()
+    if response=='No' or response=='no' or response=='n':
+        print('Goodbye, friend.')
+        sys.exit()    
+    if response=='Yes' or response=='yes' or response=='y':
+        print ('Hooray, more spam!')
+        continue
+    
